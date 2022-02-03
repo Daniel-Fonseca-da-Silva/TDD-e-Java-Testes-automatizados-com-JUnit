@@ -2,6 +2,6 @@ package br.com.alura.tdd.modelo;
 
 public enum Desempenho {
     RAZOAVEL,
-    BOM;
-
+    BOM,
+    OTIMO;
 }
