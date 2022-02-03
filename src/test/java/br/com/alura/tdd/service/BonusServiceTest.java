@@ -12,9 +12,17 @@ public class BonusServiceTest {
 	@Test()
 	void bonusDeveriaSerZeroParaFuncionarioSalarioMuitoAlto() {
 		BonusService service = new BonusService();
-		BigDecimal bonus = service.calcularBonus(new Funcionario("Fulano", LocalDate.now(), new BigDecimal("25000")));
 
-		assertEquals(new BigDecimal("0.00"), bonus);
+		// assertThrows(IllegalArgumentException.class, () -> service.calcularBonus(new Funcionario("Fulano", LocalDate.now(), new BigDecimal("25000"))));
+
+		try {
+			service.calcularBonus(new Funcionario("Fulano", LocalDate.now(), new BigDecimal("25000")));
+			fail("Não deu uma exception");
+		}catch (Exception e) {
+			assertEquals("Funcionário com salario maior que 10 mil reais não poderá receber bônus", e.getMessage());
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	@Test()
