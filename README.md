@@ -1,4 +1,4 @@
-# TDD e Java: Testes automatizados com JUnit
+# :eyes: :point_down: TDD e Java: Testes automatizados com JUnit :point_down: :eyes:
 
 
   ## :boom: Faça esse curso de Testes em Java :boom:
